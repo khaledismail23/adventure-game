@@ -127,7 +127,7 @@ def fight_or_run():
 
 def print_pause(x):
     print(x)
-    # time.sleep(2)
+    time.sleep(2)
 
 
 def enter_1_or_2():
