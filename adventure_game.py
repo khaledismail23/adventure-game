@@ -112,9 +112,17 @@ def house(weapon):
     if weapon in ['a tiny dagger', 'a knife', 'a rock']:
         print_pause('You feel a bit under-prepared for this,')
         print_pause(f'what with only having {weapon}.')
-    x = int(input('Would you like to (1) fight or (2) run away?'))
-    if x in [1, 2]:
-        return x
+    return fight_or_run()
+
+
+def fight_or_run():
+    while True:
+        try:
+            x = int(input('Would you like to (1) fight or (2) run away?'))
+            if x in [1, 2]:
+                return x
+        except ValueError:
+            pass
 
 
 def print_pause(x):
